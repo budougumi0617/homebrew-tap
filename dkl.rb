@@ -21,6 +21,5 @@ class Dkl < Formula
 
   test do
     system "#{bin}/dkl --version"
-    ...
   end
 end
