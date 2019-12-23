@@ -2,16 +2,16 @@
 class Lgen < Formula
   desc "lgen generates boilerplates for layered architecture"
   homepage "https://budougumi0617.github.io/"
-  version "0.0.2"
+  version "0.0.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/budougumi0617/lgen/releases/download/v0.0.2/lgen_0.0.2_Darwin_x86_64.tar.gz"
-    sha256 "3e09b933e7589fddcdda0439889634704dd533c7391f0a55768dea671bb1281d"
+    url "https://github.com/budougumi0617/lgen/releases/download/v0.0.3/lgen_0.0.3_Darwin_x86_64.tar.gz"
+    sha256 "2d51f1e53ac297e5136e7d4e11f42a3216258cd88786687b37562b85f64b7265"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/budougumi0617/lgen/releases/download/v0.0.2/lgen_0.0.2_Linux_x86_64.tar.gz"
-      sha256 "ee7078b4bb7373b385d63bc44cf8539f5fb413d0cb7ebd95f66ca8d60b3401c8"
+      url "https://github.com/budougumi0617/lgen/releases/download/v0.0.3/lgen_0.0.3_Linux_x86_64.tar.gz"
+      sha256 "31b1bd797332fdc2b7ac474669f9071261d079301fbf6ff1e22efff4efa14191"
     end
   end
 
