@@ -2,16 +2,16 @@
 class Leetgode < Formula
   desc "LeetCode CLI for Gophers."
   homepage "https://budougumi0617.github.io/"
-  version "0.0.1"
+  version "0.0.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/budougumi0617/leetgode/releases/download/v0.0.1/leetgode_0.0.1_Darwin_x86_64.tar.gz"
-    sha256 "8f430d07059b5ba7007b5dc203b2381ddbf7f55054d9bf61787568d51f927a08"
+    url "https://github.com/budougumi0617/leetgode/releases/download/v0.0.2/leetgode_0.0.2_Darwin_x86_64.tar.gz"
+    sha256 "cda85f4438757a0170ccefe5c8008e5f919fd1c8cb8b249c437b0e69df04ab82"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/budougumi0617/leetgode/releases/download/v0.0.1/leetgode_0.0.1_Linux_x86_64.tar.gz"
-      sha256 "f81712c453f6f7bd4e129246c06848e34fb577778610ca6019eebb326bcffa6b"
+      url "https://github.com/budougumi0617/leetgode/releases/download/v0.0.2/leetgode_0.0.2_Linux_x86_64.tar.gz"
+      sha256 "51bf8cd3ab48a6acde1bcf6921fe2b49490fde7d28c3173a21f6dbc5c05d5330"
     end
   end
 
