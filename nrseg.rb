@@ -5,20 +5,20 @@
 class Nrseg < Formula
   desc "Insert function segments into any function/method for Newrelic APM."
   homepage "https://github.com/budougumi0617/nrseg"
-  version "0.0.4"
+  version "0.0.5"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/budougumi0617/nrseg/releases/download/v0.0.4/nrseg_0.0.4_Darwin_x86_64.tar.gz"
-    sha256 "7afdbb6b36a4ba592fa78bdf804c056f4c1e6035ae48e05d0614061a8a6d1b27"
+    url "https://github.com/budougumi0617/nrseg/releases/download/v0.0.5/nrseg_0.0.5_Darwin_x86_64.tar.gz"
+    sha256 "5d8428243fa67bc930ee2adc602eaf9c0d70eba702c67a8e259dbf56813b3a81"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/budougumi0617/nrseg/releases/download/v0.0.4/nrseg_0.0.4_Linux_x86_64.tar.gz"
-    sha256 "0c255f063eba73b61b4e48f25a3b62d24aba7d5d9cbd1c00957723beed21aa4f"
+    url "https://github.com/budougumi0617/nrseg/releases/download/v0.0.5/nrseg_0.0.5_Linux_x86_64.tar.gz"
+    sha256 "a72745afc3b78eb4dddd61e0c8a58478b47edbac3eb58e369708017b958e65b3"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/budougumi0617/nrseg/releases/download/v0.0.4/nrseg_0.0.4_Linux_arm64.tar.gz"
-    sha256 "c8b3c37c0c10b9cb40f43122e4bede9006b2365dc3f1c383d4bd4542e86107f3"
+    url "https://github.com/budougumi0617/nrseg/releases/download/v0.0.5/nrseg_0.0.5_Linux_arm64.tar.gz"
+    sha256 "64015e66cb08a89ac6193be46890b0108c7251d4e799d544bd59d811d4f8c7aa"
   end
 
   def install
