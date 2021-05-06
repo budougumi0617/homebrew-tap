@@ -5,24 +5,24 @@
 class Gigi < Formula
   desc "Check pull request size."
   homepage "https://github.com/budougumi0617/gigi"
-  version "0.0.8"
+  version "0.0.9"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/budougumi0617/gigi/releases/download/v0.0.8/gigi_0.0.8_Darwin_x86_64.tar.gz"
-    sha256 "123cec2b39544146a51827fe9651cff3fb89f9b76eec969c957e32d001298236"
+    url "https://github.com/budougumi0617/gigi/releases/download/v0.0.9/gigi_0.0.9_Darwin_x86_64.tar.gz"
+    sha256 "bbd88850694d981a304206775bd2e2141d93a92e468fafc767cfc1c914824611"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/budougumi0617/gigi/releases/download/v0.0.8/gigi_0.0.8_Darwin_arm64.tar.gz"
-    sha256 "6a5bdf9b95b348ea32037f2f77df35aa8b97587ad14e8ba428b505993b1addb5"
+    url "https://github.com/budougumi0617/gigi/releases/download/v0.0.9/gigi_0.0.9_Darwin_arm64.tar.gz"
+    sha256 "50a1ea0d3f040a9c8478a8e3208876eec7b891f77dfb073035df5cd5326ea264"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/budougumi0617/gigi/releases/download/v0.0.8/gigi_0.0.8_Linux_x86_64.tar.gz"
-    sha256 "c5531ab7f0c302b67b8f3d8b3e0f435f4291f6fcca53503aaad5f710e2561593"
+    url "https://github.com/budougumi0617/gigi/releases/download/v0.0.9/gigi_0.0.9_Linux_x86_64.tar.gz"
+    sha256 "212df266775b8d2fa862753e52a9ce62576a336b5cd248670433baa9201d3d2e"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/budougumi0617/gigi/releases/download/v0.0.8/gigi_0.0.8_Linux_arm64.tar.gz"
-    sha256 "1a59772500e5fc7c8c14ee23b72d051f3f2a68cef6c4a620330e7e3d6a36e1df"
+    url "https://github.com/budougumi0617/gigi/releases/download/v0.0.9/gigi_0.0.9_Linux_arm64.tar.gz"
+    sha256 "3b8298f18f8d49840d4d8a0a1eb031380bf643842b2fbaff6fa6348f84d25e9b"
   end
 
   def install
