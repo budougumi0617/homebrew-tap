@@ -5,24 +5,49 @@
 class Nrseg < Formula
   desc "Insert function segments into any function/method for Newrelic APM."
   homepage "https://github.com/budougumi0617/nrseg"
-  version "0.0.5"
-  bottle :unneeded
+  version "0.0.10"
+  license "MIT"
 
-  if OS.mac?
-    url "https://github.com/budougumi0617/nrseg/releases/download/v0.0.5/nrseg_0.0.5_Darwin_x86_64.tar.gz"
-    sha256 "5d8428243fa67bc930ee2adc602eaf9c0d70eba702c67a8e259dbf56813b3a81"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/budougumi0617/nrseg/releases/download/v0.0.5/nrseg_0.0.5_Linux_x86_64.tar.gz"
-    sha256 "a72745afc3b78eb4dddd61e0c8a58478b47edbac3eb58e369708017b958e65b3"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/budougumi0617/nrseg/releases/download/v0.0.5/nrseg_0.0.5_Linux_arm64.tar.gz"
-    sha256 "64015e66cb08a89ac6193be46890b0108c7251d4e799d544bd59d811d4f8c7aa"
+  on_macos do
+    on_intel do
+      url "https://github.com/budougumi0617/nrseg/releases/download/v0.0.10/nrseg_v0.0.10_darwin_amd64.tar.gz"
+      sha256 "8b7cc908ea4f034145e8af4f542faa1482d49915d42988e2b2cbb99cb8090933"
+
+      def install
+        bin.install "nrseg"
+      end
+    end
+    on_arm do
+      url "https://github.com/budougumi0617/nrseg/releases/download/v0.0.10/nrseg_v0.0.10_darwin_arm64.tar.gz"
+      sha256 "6eac46470cf27401695770d5c7de565220bf2d2f350a45bed74b9cab68b44833"
+
+      def install
+        bin.install "nrseg"
+      end
+    end
   end
 
-  def install
-    bin.install "nrseg"
+  on_linux do
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/budougumi0617/nrseg/releases/download/v0.0.10/nrseg_v0.0.10_linux_amd64.tar.gz"
+        sha256 "a08dbff1d15bc846fdfcb2a1aa2699e5260af151ab16718df534e37b46646650"
+
+        def install
+          bin.install "nrseg"
+        end
+      end
+    end
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/budougumi0617/nrseg/releases/download/v0.0.10/nrseg_v0.0.10_linux_arm64.tar.gz"
+        sha256 "4b35799feccfc374a87129b9627a4b9167cb612bb2aefc81426e4af88a4c4bb8"
+
+        def install
+          bin.install "nrseg"
+        end
+      end
+    end
   end
 
   test do
